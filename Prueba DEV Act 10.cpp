@@ -39,7 +39,7 @@ void Leer (){
 	int id = 0; //indice o pocision del registro(fila) dentro del archivo
 	fread (&estudiante,sizeof(Estudiante),1,Archivo);
 	cout<<"_________________________"<<endl;
-	cout<<"ID"<<"|"<<"Codigo"<<"|"<<"    Nombres"    <<"|"<<"    Apellidos    "<<"|"<<"Telefono"<<"|"<<"Nota 1"<<"|"<<"Nota 2"<<"|"<<"Nota 3"<<"|"<<"Nota 4"<<"|"<<"Promedio"<<"|"<<"Resultado"<<"|"<<endl;
+	cout<<"ID"<<"|"<<"Codigo"<<"|"<<"    Nombres"    <<"|"<<"    Apellidos    "<<"|"<<"Telefono"<<"|"<<"Nota 1"<<"|"<<"Nota 2"<<"|"<<" Nota 3 "<<"|"<<"Nota 4"<<"|"<<"Promedio"<<"|"<<"Resultado"<<"|"<<endl;
 	
 	do{
 		cout<<id<<"|"<<estudiante.codigo<<"|"<<estudiante.nombres<<"|"<<estudiante.apellidos<<"|"<<estudiante.telefono<<"|"<<estudiante.nota1<<"|"<<estudiante.nota2<<"|"<<estudiante.nota3<<"|"<<estudiante.nota4<<"|"<<estudiante.promedio<<"|"<<estudiante.resultado<<"|"<<endl;
@@ -82,17 +82,18 @@ void Crear(){
 		cout<<"Ingrese la nota # 4:";
 		cin>>estudiante.nota4;
 		
+		
+		for (int i = 0; i>=60;i++)
 		i=estudiante.promedio;
-		for (i = 0; i>=i;i++)
 			estudiante.promedio = (estudiante.nota1 + estudiante.nota2 + estudiante.nota3 + estudiante.nota4)/4;
 			
 			cout<<"Su promedio es de:"<<estudiante.promedio;
 		
 		
 		if (estudiante.promedio>61){
-			cout<<"Su resultado es: "<<estudiante.resultado<<" Aprobó el curso"<<endl;
+			cout<<"Su resultado es: "<<(estudiante.resultado)<<" Aprobo el curso"<<endl;
 		}else {
-			cout<<(estudiante.resultado,50);
+			cout<<(estudiante.resultado,50)<<"Reprobo el curso";
 			cin.getline(estudiante.resultado,50);
 		}
 		
